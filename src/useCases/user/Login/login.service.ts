@@ -27,11 +27,14 @@ export class LoginUseCase implements IUseCase {
           message: 'Credentials not valid'
         }
       }
+      const token = await this.TokenProvider.create(userSearched.id as string)
+      const { password, ...user } = userSearched
       return {
         code: 201,
         message: '',
         content: {
-          token: this.TokenProvider.create(userSearched.id as string)
+          token,
+          user
         }
       }
     } catch (error: any) {
