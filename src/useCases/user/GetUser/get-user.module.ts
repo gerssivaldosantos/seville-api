@@ -1,6 +1,6 @@
-import { userRepository } from "../user.repository";
-import { GetUserController } from "./get-user.controller";
-import { GetUserUseCase } from "./get-user.service";
+import { userRepository } from '../user.repository'
+import { GetUserController } from './get-user.controller'
+import { GetUserUseCase } from './get-user.service'
 
 const getUserUseCase = new GetUserUseCase(userRepository)
 

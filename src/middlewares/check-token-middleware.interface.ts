@@ -1,5 +1,5 @@
-import { NextFunction, Request, Response } from "express"
+import { NextFunction, Request, Response } from 'express'
 
 export interface CheckTokenMiddlewareInteraface {
-    checkToken(request: Request, response: Response, next: NextFunction): Promise<void>
+  checkToken: (request: Request, response: Response, next: NextFunction) => Promise<void>
 }
